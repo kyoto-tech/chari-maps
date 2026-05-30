@@ -5,13 +5,12 @@
     "lib": ["ES2020"],
     "types": ["node"],
     "outDir": "./dist",
-    "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "knexfile.ts", "migrations/**/*"],
   "exclude": ["node_modules", "dist"]
 }
