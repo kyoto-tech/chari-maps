@@ -117,7 +117,8 @@ export default function StreetForm({ way, onClose }: Props) {
     setSaving(true);
     setError(null);
     try {
-      const res = await fetch("/maps", {
+      const base = import.meta.env.VITE_API_BASE ?? "";
+      const res = await fetch(`${base}/api/maps`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

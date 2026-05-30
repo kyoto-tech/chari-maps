@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT ?? 3000;
 
 app.use(express.json());
-app.use('/maps', mapsRouter);
+app.use('/api/maps', mapsRouter);
 
 db.migrate.latest()
   .then(() => {
